@@ -22,13 +22,14 @@ public class gift1 {
 
 		// make a table
 		int nPeople = Integer.parseInt(in.readLine());
+		
 		// the value stored in the map keeps track of the total given by each
 		// person (which is the result we ultimately want)
 		LinkedHashMap<String, Integer> table = new LinkedHashMap<String, Integer>(
 				nPeople);
-		// A linked hashmap has been used because the problem requires us to
-		// print the values in the order they were added. A linked hashmap keeps
-		// track of the order teh eements were added in.
+				// A linked hashmap has been used because the problem requires us to
+				// print the values in the order they were added. A linked hashmap keeps
+				// track of the order teh eements were added in.
 
 		
 		// populate it
