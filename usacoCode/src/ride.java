@@ -40,18 +40,19 @@ public class ride {
 		in.close();
 		
 	}
-	
-	private static boolean willPickUp (String comet, String group){
+		private static boolean willPickUp (String comet, String group){
 		int cometProduct = 1, groupProduct = 1;
 		
 		// find product for comet
 		for (int i = 0; i < comet.length(); i++){
-			cometProduct *= ((int)(comet.charAt(i) - 'A') + 1) % 47;
+			cometProduct = (cometProduct * ((int)(comet.charAt(i) - 'A') + 1)) % 47;
+			System.out.println("i: " + cometProduct);
 		}
 		
 		// find product for group
 		for (int i = 0; i < group.length(); i++){
-			groupProduct *= ((int)(group.charAt(i) - 'A') + 1) % 47;
+			groupProduct = (groupProduct * ((int)(group.charAt(i) - 'A') + 1)) % 47;
+			System.out.println("j: " + groupProduct);
 		}
 		
 		return (groupProduct == cometProduct);
