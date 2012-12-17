@@ -15,9 +15,7 @@ import java.io.PrintWriter;
 
 public class ride {
 
-	/**
-	 * @param args
-	 */
+	
 	public static void main(String[] args) throws IOException {
 		
 		// setup input stream
