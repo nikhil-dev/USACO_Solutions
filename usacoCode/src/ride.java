@@ -40,7 +40,8 @@ public class ride {
 		in.close();
 		
 	}
-		private static boolean willPickUp (String comet, String group){
+	
+	private static boolean willPickUp (String comet, String group){
 		int cometProduct = 1, groupProduct = 1;
 		
 		// find product for comet
