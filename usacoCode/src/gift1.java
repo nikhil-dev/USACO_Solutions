@@ -18,10 +18,6 @@ import java.util.StringTokenizer;
 public class gift1 {
 	public static void main (String [] args) throws Exception{
 		
-//		PrintWriter outer = new PrintWriter (new BufferedWriter (new FileWriter("test.out")));
-//		outer.println("hi");
-//		outer.close();
-//		
 		// setup an input stream
 		BufferedReader in = new BufferedReader (new FileReader ("gift1.in")); 
 		
@@ -29,15 +25,13 @@ public class gift1 {
 		int nPeople = Integer.parseInt(in.readLine());
 		// the value stored in the map keeps track of the total given by each person (which is the result we ultimately want)
 		LinkedHashMap<String, Integer> table = new LinkedHashMap<String, Integer> (nPeople);
-			// A linked hashmap has been used because the problem requires us to print the values in the order they were added
+			// A linked hashmap has been used because the problem requires us to print the values in the order they were added. A linked hashmap keeps track of the order teh eements were added in.
 		
 		// populate it
 		for (int i = 0; i < nPeople; i++){
 			String current = in.readLine();
 			table.put(current, 0);
 		}
-		
-		//System.out.println("---------");
 		
 		StringTokenizer tokenizer;
 		// do updates for each person
@@ -63,7 +57,6 @@ public class gift1 {
 			// update the amounts of the people who receive from currentGiver
 			for (int j = 0; j < nGifts; j++){
 				String beneficiary = in.readLine();
-				//System.out.println(beneficiary);
 				int beneficiaryGiven = table.get(beneficiary);
 				beneficiaryGiven -= eachGift;
 				table.put(beneficiary, beneficiaryGiven);
