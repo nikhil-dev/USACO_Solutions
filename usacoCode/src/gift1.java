@@ -29,7 +29,7 @@ public class gift1 {
 				nPeople);
 				// A linked hashmap has been used because the problem requires us to
 				// print the values in the order they were added. A linked hashmap keeps
-				// track of the order teh eements were added in.
+				// track of the order the elements were added in.
 
 		
 		// populate it
