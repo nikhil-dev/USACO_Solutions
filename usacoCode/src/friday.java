@@ -110,12 +110,12 @@ public class friday {
 		out.println();
 	}
 	
-	private static void print (int [] array){
-		int i = 5;
-		for (int count = 0; count < array.length; count++){
-			System.out.print((i)%7 + ": " + array[(i++)%7] + "      ");
-		}
-	}
+//	private static void print (int [] array){
+//		int i = 5;
+//		for (int count = 0; count < array.length; count++){
+//			System.out.print((i)%7 + ": " + array[(i++)%7] + "      ");
+//		}
+//	}
 }
 
 
