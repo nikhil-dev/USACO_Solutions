@@ -24,7 +24,8 @@ public class transform {
 		String line;
 
 		char[][] square = new char[side][side];
-		for (int i = 0; i < side; i++) { // reads in starting square
+		// reads in starting square
+		for (int i = 0; i < side; i++) { 
 			line = in.readLine();
 			for (int j = 0; j < side; j++) {
 				square[i][j] = line.charAt(j);
@@ -33,7 +34,8 @@ public class transform {
 		
 		
 		char[][] finalSquare = new char[side][side];
-		for (int i = 0; i < side; i++) { // reads in final square
+		// reads in final square
+		for (int i = 0; i < side; i++) { 
 			line = in.readLine();
 			for (int j = 0; j < side; j++) {
 				finalSquare[i][j] = line.charAt(j);
@@ -64,6 +66,9 @@ public class transform {
 		out.close();
 	}
 	
+	/*
+	 * rotates a given character square by 90 degrees in the clockwise direction and returns the rotated array
+	 */
 	private static char[][] rotate(char[][] square) {
 		char[][] rotatedSquare = new char[square.length][square.length];
 		for (int i = 0; i < square.length; i++) {
@@ -74,6 +79,9 @@ public class transform {
 		return rotatedSquare;
 	}
 
+	/*
+	 * reflects about a vertical line down the middle of the square
+	 */
 	private static char[][] reflect(char[][] square) {
 		char[][] reflectedSquare = new char[square.length][square.length];
 		for (int i = 0; i < square.length; i++) {
@@ -84,6 +92,9 @@ public class transform {
 		return reflectedSquare;
 	}
 
+	/*
+	 * compares two squares and returns if they are equal
+	 */
 	private static boolean areEqual(char[][] array1, char[][] array2) {
 		boolean isEqual = true;
 		for (int i = 0; i < array1.length; i++) {

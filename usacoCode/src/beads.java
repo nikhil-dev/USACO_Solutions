@@ -92,13 +92,11 @@ public class beads {
     				currentWLength = 0;
     			}
     		}
-//    		System.out.println("First: " + currentFirstLength + "   Second: " + currentSecondLength);
-//    		System.out.println(str.charAt(i));
-//    		System.out.println();
     	}
     	
     	boolean isFirstOnWrap = true;
-    	// another for loop to wrap around the string to check if the longest string begins at the tail of the sting and ends near the head.
+    	
+    	// another "for" loop to wrap around the string to check if the longest string begins at the tail of the sting and ends near the head.
     	for (int j = 0; j < currentStartPosition; j++){
     		if (str.charAt(j) == current || str.charAt(j) == 'w'){
     			currentSecondLength++;
