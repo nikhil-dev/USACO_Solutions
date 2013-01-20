@@ -37,6 +37,9 @@ public class palsquare {
 		out.close();
 	}
 
+	/*
+	 * checks if the input String pattern is a palindrome
+	 */
 	private static boolean isPalindrome(String pattern) {
 		boolean isPalindrome = true;
 		int halfLength = pattern.length() / 2;
@@ -50,7 +53,11 @@ public class palsquare {
 		}
 		return isPalindrome;
 	}
-
+	
+	
+	/*
+	 * converts a number to a new base representation and returns the number in the new representation
+	 */
 	private static String toBaseB(int base, int number) {
 		LinkedList<Character> list = new LinkedList<Character>();
 		char current;
@@ -64,6 +71,9 @@ public class palsquare {
 		return listToString(list);
 	}
 	
+	/*
+	 * converts a List<Character> type to the equivalent String and returns the String
+	 */
 	private static String listToString(List<Character> charSequence){
 		StringBuilder string = new StringBuilder();
 		for (char c : charSequence){
