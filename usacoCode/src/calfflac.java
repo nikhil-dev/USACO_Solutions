@@ -5,42 +5,30 @@
  FILE: calfflac.java
  */
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Scanner;
 
 public class calfflac {
 	public static void main(String[] args) throws IOException {
 
-		System.out.println("hi\rhihow are you \r hey");
 		
 		/*
 		 * read the input from the file to a string
 		 */
-//		 BufferedReader in = new BufferedReader(new
-//		 FileReader("calfflac.in"));
-//		 StringBuilder inputText = new StringBuilder();
-//		 String line;
-//		 while ((line = in.readLine()) != null) {
-//		 inputText.append(line);
-//		 inputText.append('\n');
-//		 }
-//		 in.close();
-//		 String text = inputText.toString();
-		
-		Scanner scanner = new Scanner(new FileReader("calfflac.in"));
-        String str;
-        while ((str = scanner.nextLine()) != null)
-            // No need to convert to char array before printing
-            System.out.println(str);
+		BufferedReader in = new BufferedReader(new FileReader("calfflac.in"));
+		StringBuilder inputText = new StringBuilder();
+		String line;
+		while ((line = in.readLine()) != null) {
+			inputText.append(line);
+			inputText.append('\n');
+		}
+		in.close();
+		String text = inputText.toString();		
 
-//		Scanner scan = new Scanner(new FileReader("calfflac.in"));
-//		scan.useDelimiter("");
-//		String text = scan.next();
-//		scan.close();
 
 		/*
 		 * loop though the each character of the string and find the length of
